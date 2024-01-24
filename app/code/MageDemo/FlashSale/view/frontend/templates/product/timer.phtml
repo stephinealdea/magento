@@ -1,0 +1,25 @@
+<?php
+/* @var $block \MageDemo\FlashSale\Block\Timer;
+ */
+
+$text = $block->getString();
+?>
+<div class="flash-sale-container">
+    <span><?= $text; ?></span>
+    <div class="timer-wrapper" data-bind="scope: flashsale-timer">
+        <h2 data-bind="text: heading"></h2>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "flashsale-timer": {
+                "component": "FlashSale/js/knockout-timer",
+                "timerMessage": "<?= __('Hello Timer Here')?>"
+            }
+        }
+    }
+}
+</script>
