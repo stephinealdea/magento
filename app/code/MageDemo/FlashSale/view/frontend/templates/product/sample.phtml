@@ -1,0 +1,26 @@
+<?php
+/* @var $block \MageDemo\FlashSale\Block\Sample;
+ */
+$_product = $block->getProduct();
+?>
+
+<div class="sample-block-container">
+    <div class="sample-wrapper" data-bind="scope:'sample_block'">
+        <h2 data-bind="text: heading"></h2>
+    </div>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "*": {
+        "Magento_Ui/js/core/app": {
+            "components": {
+                "sample_block": {
+                    "component": "MageDemo_FlashSale/js/knockout-sample",
+                    "sampleMessage": "<?= $_product->getName(); ?>"
+                }
+            }
+        }
+    }
+}
+</script>

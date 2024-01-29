@@ -8,8 +8,12 @@
 <page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
    <body>
        <move element="flash.sale.container" destination="product.info.main" before="page.main.title"/>
+       <move element="sample.container" destination="product.info.main" after="-"/>
        <container name="flash.sale.container">
            <block class="MageDemo\FlashSale\Block\Timer" name="flash.sale" template="MageDemo_FlashSale::product/timer.phtml" before="-"/>
+       </container>
+       <container name="sample.container">
+           <block class="MageDemo\FlashSale\Block\Sample" name="sample.block" template="MageDemo_FlashSale::product/sample.phtml"/>
        </container>
    </body>
 </page>

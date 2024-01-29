@@ -2,7 +2,7 @@
 /* @var $block \MageDemo\FlashSale\Block\Timer;
  */
 $_product = $block->getProduct();
-$text = $block->getString();
+$text = $block->getTimer();
 ?>
 
 <div class="flash-sale-container">
@@ -19,7 +19,7 @@ $text = $block->getString();
             "components": {
                 "flash_timer": {
                     "component": "MageDemo_FlashSale/js/knockout-timer",
-                    "timerMessage": "<?= $_product->getName(); ?>"
+                    "timerMessage": "<?= __('hello') ?>"
                 }
             }
         }
